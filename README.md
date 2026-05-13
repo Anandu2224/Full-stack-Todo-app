@@ -1,9 +1,9 @@
-## Todo App
+# Todo App
 
 This is a simple todo app having the following features:
 
--signup
--signin
--create a task
--see existing todos
--can mark as done
+- Signup
+- Signin
+- Create a task
+- See existing todos
+- Mark tasks as done
