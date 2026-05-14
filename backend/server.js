@@ -4,9 +4,12 @@ const { updatetodo } = require('./types')
 const { Tasks } = require('./db')
 // import { updatetodo } from './types';
 const express = require('express');
+const cors=require('cors')
 const app = express()
 app.use(express.json())
+app.use(cors())
 const PORT = 4000;
+
 
 app.post('/addtask', async (req, res) => {
 

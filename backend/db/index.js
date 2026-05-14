@@ -5,7 +5,10 @@ mongoose.connect('mongodb+srv://Anandu2001:Anandu2206@cluster0.xxwybre.mongodb.n
 const todoSchema= new mongoose.Schema({
     title:String,
     description:String,
-    completed:Boolean
+    completed:{
+        type:Boolean,
+        default:false
+    }
 })
 
 const Tasks= new mongoose.model('Tasks',todoSchema);

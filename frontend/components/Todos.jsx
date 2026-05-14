@@ -1,12 +1,17 @@
-export function Todos(){
+// todos will be an array from the render side so destructuring needed={todos}
+
+export function Todos({ todos }) {
     return (
-        <div style={{
-            margin:10,
-            padding:10
-        }}>
-            <h1>Go to gym</h1>
-            <h3>hit the gym today at 3 pm</h3>
-            <button>mark as done</button>
+        <div>
+            {todos.map((todo) => {
+                return (
+                    <div>
+                        <h1>{todo.title}</h1>
+                        <h3>{todo.description}</h3>
+                        <button>mark as done</button>
+                    </div>
+                )
+            })}
         </div>
     )
 }

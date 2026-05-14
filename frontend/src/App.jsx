@@ -8,14 +8,21 @@ import { Todos } from '../components/Todos'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [todos, setTodos] = useState([])
+
+
+  // fetch('http://localhost:4000/viewtask').then(async(res)=>{
+  //   const json=await res.json();
+  //   setTodos(json.tasks);
+
+  // })
 
   return (
     <div>
       <Createtodo/>
-      <Todos/>
+      <Todos todos={todos}/>
     </div>
   )
 }
-
+ 
 export default App
